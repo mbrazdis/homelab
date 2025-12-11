@@ -168,7 +168,7 @@ npm run dev
 The web interface will be available at `http://localhost:3000`
 
 #### Start iOS App (Optional)
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-06-06 at 16 47 58" src="https://github.com/user-attachments/assets/769abe72-de43-49cf-93fd-13d53f04ee60" />
+<img width="603" height="1311" alt="Simulator Screenshot - iPhone 16 Pro - 2025-06-06 at 16 47 58" src="https://github.com/user-attachments/assets/769abe72-de43-49cf-93fd-13d53f04ee60" />
 
 1. Open `iOS_homelab/iOS_homelab.xcodeproj` in Xcode
 2. Update WebSocket URL in `ViewModels/WebSocketManager.swift` to your backend IP
