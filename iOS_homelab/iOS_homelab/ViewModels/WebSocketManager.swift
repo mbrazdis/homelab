@@ -6,6 +6,11 @@ class WebSocketManager: ObservableObject {
     @Published var rooms: [Room] = []
     private var webSocketTask: URLSessionWebSocketTask?
     @Published var isConnected = false
+    
+    // Configure this URL to match your backend server
+    // For local development with simulator: ws://localhost:8000/ws
+    // For physical device on same network: ws://YOUR_BACKEND_IP:8000/ws
+    private let wsURL = "ws://localhost:8000/ws"
 
     private init() {}
 
@@ -14,7 +19,7 @@ class WebSocketManager: ObservableObject {
             print("[WebSocket] Already connected")
             return
         }
-        guard let url = URL(string: "ws://192.168.0.67:8000/ws") else {
+        guard let url = URL(string: wsURL) else {
             print("[WebSocket] Invalid URL")
             return
         }

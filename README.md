@@ -358,9 +358,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-**Mihail Brazdis** - [Your Email or GitHub Profile]
+**Mihail Brazdis** - [@mbrazdis](https://github.com/mbrazdis)
 
-Project Link: [https://github.com/yourusername/homelab](https://github.com/yourusername/homelab)
+Project Link: [https://github.com/mbrazdis/homelab](https://github.com/mbrazdis/homelab)
 
 ---
 
