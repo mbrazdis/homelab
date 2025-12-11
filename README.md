@@ -6,7 +6,8 @@
 
 A modern, extensible smart home control platform inspired by [Home Assistant](https://www.home-assistant.io/), designed to integrate devices from multiple manufacturers into a unified control interface.
 
-![HomeLab Architecture](https://via.placeholder.com/800x400.png?text=Add+Your+Dashboard+Screenshot)
+<img width="1596" height="861" alt="Screenshot 2025-06-17 at 23 13 50" src="https://github.com/user-attachments/assets/79a2739b-a57d-4dbc-a494-a7a77e2deaeb" />
+
 
 ## ✨ Features
 
@@ -29,16 +30,16 @@ A modern, extensible smart home control platform inspired by [Home Assistant](ht
 HomeLab is a monorepo consisting of three interconnected applications:
 
 ```
-                    ┌─────────────────┐
-                    │  Smart Devices  │ (Shelly, etc.)
-                    └────────┬────────┘
-                             │ MQTT
-                             ▼
-                    ┌─────────────────┐
-                    │  MQTT Broker    │ (Mosquitto)
-                    └────────┬────────┘
-                             │
-                             ▼
+                              ┌─────────────────┐
+                              │  Smart Devices  │ (Shelly, etc.)
+                              └────────┬────────┘
+                                       │ MQTT
+                                       ▼
+                              ┌─────────────────┐
+                              │  MQTT Broker    │ (Mosquitto)
+                              └────────┬────────┘
+                                       │
+                                       ▼
 ┌─────────────────┐ WebSocket ┌─────────────────┐ WebSocket ┌─────────────────┐
 │   iOS App       │◄─────────►│  Python Backend │◄─────────►│  Next.js Web    │
 │    (Swift)      │           │    (FastAPI)    │           │    Frontend     │
@@ -153,6 +154,7 @@ cd core
 source venv/bin/activate
 python main.py
 ```
+<img width="573" height="325" alt="Screenshot 2025-06-17 at 22 57 54" src="https://github.com/user-attachments/assets/dcf61056-47f0-4338-8ecd-bccbc7f93b7b" />
 
 The backend will be available at `http://localhost:8000`
 
@@ -166,20 +168,27 @@ npm run dev
 The web interface will be available at `http://localhost:3000`
 
 #### Start iOS App (Optional)
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-06-06 at 16 47 58" src="https://github.com/user-attachments/assets/769abe72-de43-49cf-93fd-13d53f04ee60" />
 
 1. Open `iOS_homelab/iOS_homelab.xcodeproj` in Xcode
 2. Update WebSocket URL in `ViewModels/WebSocketManager.swift` to your backend IP
 3. Run on simulator or device
 
 ## 📖 Usage
+<img width="1596" height="707" alt="Screenshot 2025-06-17 at 23 13 07" src="https://github.com/user-attachments/assets/7b41271a-db2f-489e-a258-c3c73f85cfb3" />
 
 ### Adding Devices
+
+<img width="1544" height="883" alt="Screenshot 2025-06-17 at 23 18 58" src="https://github.com/user-attachments/assets/8d17ed9e-5bd1-441a-aaf9-61f0742ce3e5" />
+
+<img width="1544" height="883" alt="Screenshot 2025-06-17 at 23 17 43" src="https://github.com/user-attachments/assets/6daf0bcb-0459-411a-acd7-143cc3b0c94c" />
 
 1. Ensure your smart device is connected to the same network
 2. The device will auto-announce via MQTT
 3. Navigate to **Settings → Devices** in the web interface
 4. Click **Add Device** and select from discovered devices
 5. Assign the device to a room
+<img width="1544" height="883" alt="Screenshot 2025-06-17 at 23 18 45" src="https://github.com/user-attachments/assets/c25c4ab1-c36f-464c-8c16-4c66642aef04" />
 
 ### Controlling Devices
 
