@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model Room {
+  id             Int          @id @default(autoincrement())
+  name           String       @unique
+  status         String?      @default("{}")
+  entities       Entity[] 
+  image          String?
+}
+
+model Entity {
+  id             String       @id
+  name           String
+  type           String
+  manufacturer   String?
+  model          String?
+  status         String?      @default("{}")
+  config         String?      @default("{}")
+  linkedEntity   Entity[]     @relation("linkedEntity")
+  linkedBy       Entity[]     @relation("linkedEntity")
+  roomId         Int?     
+  lastUpdated    DateTime?    @default(now())
+
+  room           Room?        @relation(fields: [roomId], references: [id], onDelete: SetNull)
+}
